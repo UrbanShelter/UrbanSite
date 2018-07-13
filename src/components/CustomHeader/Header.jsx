@@ -84,9 +84,8 @@ class Header extends React.Component {
     );
 
     const customBrandComponent = (
-      <img className={classes.logo} src={ require('assets/img/logo.png') } />
+      <img className={classes.logo} src={ require('assets/img/logo.svg') } />
     );
-
 
     return (
       <AppBar className={appBarClasses}>

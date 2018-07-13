@@ -29,7 +29,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 
 import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.jsx";
 import typographyStyle from "assets/jss/material-kit-react/views/componentsSections/typographyStyle.jsx";
-import CustomTypeForm from "assets/jss/material-kit-react/components/customTypeForm.jsx";
+import CustomTypeForm from "components/CustomTypeForm/CustomTypeForm.jsx";
+import SwitchingButton from "components/SwitchingButton/SwitchingButton.jsx";
 
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.jsx";
@@ -39,9 +40,14 @@ import { Toolbar } from "@material-ui/core";
 
 
 const dashboardRoutes = [];
-const image=require("assets/img/urban-landing.png");
 
 class CustomLandingPage extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      selected: 0,
+    }
+  }
 
   render() {
     const { classes, ...rest } = this.props;
@@ -73,23 +79,28 @@ class CustomLandingPage extends React.Component {
             <div style={{display: 'flex', justifyContent: 'center', marginTop: '2vh'}}>
             <CustomTypeForm placeholder={"Email Address"}>Get Early Access</CustomTypeForm>
             </div>
+            <div style={{color:'black', margin: '16px 0px 0px 0px', fontSize: 16}}> 
+              <b style={{display: 'inline'}}>First 250 Tenants get an extra </b>
+              <b style={{display: 'inline', color: 'rgba(248,65,81,1)'}}>$50 Off</b>
+              <b style={{display: 'inline'}}> on their Rental!</b>
+            </div>
           </div>
         </Parallax>
-        <div className={classNames(classes.main, classes.mainRaised)} 
+        <div 
         style={{
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '40vw',
-        minWidth: '375px',
+        width: '36vw',
+        minWidth: '360px',
         maxWidth: '795px',
-        minHeight: 36,
+        height: '4vh',
+        minHeight: '56px',
         padding: '12px',
-        backgroundColor: 'rgba(248,65,81,1)',
         margin: "-2.5vh auto",
         zIndex: '5'
       }}>
-        Tenants/Landlords
+        <SwitchingButton first={'For Tenants'} second={'For Landlords'}/>
         </div>
         <div className={classNames(classes.main, classes.mainRaised)} style={{marginTop: '-2.5vh'}}>
           <div className={classes.container}>

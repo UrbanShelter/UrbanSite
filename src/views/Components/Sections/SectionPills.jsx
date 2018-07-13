@@ -36,7 +36,6 @@ class SectionPills extends React.Component {
                   tabs={[
                     {
                       tabButton: "Dashboard",
-                      tabIcon: Dashboard,
                       tabContent: (
                         <span>
                           <p>
@@ -65,7 +64,6 @@ class SectionPills extends React.Component {
                     },
                     {
                       tabButton: "Schedule",
-                      tabIcon: Schedule,
                       tabContent: (
                         <span>
                           <p>
@@ -88,7 +86,6 @@ class SectionPills extends React.Component {
                     },
                     {
                       tabButton: "Tasks",
-                      tabIcon: List,
                       tabContent: (
                         <span>
                           <p>
