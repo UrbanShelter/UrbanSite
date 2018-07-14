@@ -12,7 +12,7 @@ const navPillsStyle = theme => ({
     marginTop: "20px",
     paddingLeft: "0",
     marginBottom: "0",
-    overflow: "visible !important"
+    overflow: "visible !important",
   },
   flexContainer: {
     [theme.breakpoints.down("xs")]: {
@@ -33,16 +33,47 @@ const navPillsStyle = theme => ({
     float: "left",
     position: "relative",
     display: "block",
-    borderRadius: "30px",
+    borderRadius: '6px 0px 0px 6px',  
+    backgroundColor: 'rgba(248,65,81,1)',    
+    color: 'rgba(255,255,255,0.5)',
     minWidth: "100px",
+    width: '50%',
     textAlign: "center",
     transition: "all .3s",
     padding: "10px 15px",
-    color: "#555555",
     height: "auto",
     opacity: "1",
     maxWidth: "100%",
-    margin: "0 5px"
+    margin: "0 2px",
+    "&:hover": {
+      color: "#FFFFFF",
+      backgroundColor: 'rgba(248,65,81,1)',
+      boxShadow:
+        "0 14px 26px -12px rgba(51, 51, 51, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(51, 51, 51, 0.2)"
+    },
+  },
+  pillsTwo: {
+    float: "left",
+    position: "relative",
+    display: "block",
+    borderRadius: '0px 6px 6px 0px', 
+    backgroundColor: 'rgba(248,65,81,1)', 
+    color: "rgba(255,255,255,0.5)",
+    minWidth: "100px",
+    width: '50%',
+    textAlign: "center",
+    transition: "all .3s",
+    padding: "10px 15px",
+    height: "auto",
+    opacity: "1",
+    maxWidth: "100%",
+    margin: "0 0px",
+    "&:hover": {
+      color: "#FFFFFF",
+      backgroundColor: 'rgba(248,65,81,1)',
+      boxShadow:
+        "0 14px 26px -12px rgba(51, 51, 51, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(51, 51, 51, 0.2)"
+    },
   },
   pillsWithIcons: {
     borderRadius: "4px"
@@ -127,6 +158,14 @@ const navPillsStyle = theme => ({
   alignCenter: {
     alignItems: "center",
     justifyContent: "center"
+  },
+  urban: {
+    "&,&:hover": {
+      color: "#FFFFFF",
+      backgroundColor: 'rgba(248,65,81,1)',
+      boxShadow:
+        "0 14px 26px -12px rgba(51, 51, 51, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(51, 51, 51, 0.2)"
+    }
   }
 });
 

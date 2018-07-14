@@ -40,7 +40,7 @@ function SwitchingButton(props) {
     ...rest
   } = props;
 
-
+  
   return (
     <div style={{
       borderRadius: "6px 6px 6px 6px",
@@ -66,6 +66,7 @@ function SwitchingButton(props) {
           }}
             onClick={() => console.log('Hey')}
             onBlur={() => console.log('Dont leave me!')}
+            role="tab"
         >
             {props.first||"Button"}
         </Button>

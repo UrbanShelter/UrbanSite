@@ -43,6 +43,7 @@ class NavPills extends React.Component {
       [classes.horizontalDisplay]: horizontal !== undefined
     });
     const tabButtons = (
+      <div>
       <Tabs
         classes={{
           root: classes.root,
@@ -60,7 +61,8 @@ class NavPills extends React.Component {
             icon["icon"] = <prop.tabIcon className={classes.tabIcon} />;
           }
           const pillsClasses = classNames({
-            [classes.pills]: true,
+            [classes.pills]: key===0,
+            [classes.pillsTwo]: key===1,
             [classes.horizontalPills]: horizontal !== undefined,
             [classes.pillsWithIcons]: prop.tabIcon !== undefined
           });
@@ -73,12 +75,13 @@ class NavPills extends React.Component {
                 root: pillsClasses,
                 labelContainer: classes.labelContainer,
                 label: classes.label,
-                selected: classes[color]
+                selected: classes.urban,
               }}
             />
           );
         })}
       </Tabs>
+      </div>
     );
     const tabContent = (
       <div className={classes.contentWrapper}>
