@@ -41,7 +41,9 @@ const navPillsStyle = theme => ({
     height: "auto",
     opacity: "1",
     maxWidth: "100%",
-    margin: "0 5px"
+    margin: "0 5px",
+    textTransform: 'none',
+    letterSpacing: 0.24,
   },
   pillsOne: {
     position: "relative",
@@ -115,9 +117,10 @@ const navPillsStyle = theme => ({
   },
   label: {
     lineHeight: "24px",
-    textTransform: "uppercase",
-    fontSize: "12px",
-    fontWeight: "500",
+    textTransform: "none",
+    letterSpacing: 0.24,
+    fontSize: 14,
+    fontWeight: "400",
     position: "relative",
     display: "block",
     color: "inherit"
