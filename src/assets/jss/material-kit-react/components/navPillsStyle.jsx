@@ -9,7 +9,7 @@ import {
 
 const navPillsStyle = theme => ({
   root: {
-    marginTop: "20px",
+    marginTop: "0px",
     paddingLeft: "0",
     marginBottom: "0",
     overflow: "visible !important",
@@ -17,7 +17,7 @@ const navPillsStyle = theme => ({
   flexContainer: {
     [theme.breakpoints.down("xs")]: {
       display: "flex",
-      flexWrap: "wrap"
+      flexGrow: 1,
     }
   },
   displayNone: {
@@ -33,17 +33,31 @@ const navPillsStyle = theme => ({
     float: "left",
     position: "relative",
     display: "block",
+    borderRadius: "30px",
+    textAlign: "center",
+    transition: "all .3s",
+    padding: "10px 15px",
+    color: "#555555",
+    height: "auto",
+    opacity: "1",
+    maxWidth: "100%",
+    margin: "0 5px"
+  },
+  pillsOne: {
+    position: "relative",
+    display: "flex",
+    flexGrow: 1,
     borderRadius: '6px 0px 0px 6px',  
     backgroundColor: 'rgba(248,65,81,1)',    
     color: 'rgba(255,255,255,0.5)',
-    minWidth: "100px",
-    width: '50%',
     textAlign: "center",
     transition: "all .3s",
     padding: "10px 15px",
     height: "auto",
     opacity: "1",
-    maxWidth: "100%",
+    width: '20vw',
+    minWidth: '200px',
+    maxWidth: '450px',
     margin: "0 2px",
     "&:hover": {
       color: "#FFFFFF",
@@ -53,20 +67,20 @@ const navPillsStyle = theme => ({
     },
   },
   pillsTwo: {
-    float: "left",
     position: "relative",
-    display: "block",
+    display: "flex",
+    flexGrow: 1,
     borderRadius: '0px 6px 6px 0px', 
     backgroundColor: 'rgba(248,65,81,1)', 
     color: "rgba(255,255,255,0.5)",
-    minWidth: "100px",
-    width: '50%',
     textAlign: "center",
     transition: "all .3s",
     padding: "10px 15px",
     height: "auto",
     opacity: "1",
-    maxWidth: "100%",
+    width: '20vw',
+    minWidth: '200px',
+    maxWidth: '450px',
     margin: "0 0px",
     "&:hover": {
       color: "#FFFFFF",
@@ -76,13 +90,17 @@ const navPillsStyle = theme => ({
     },
   },
   pillsWithIcons: {
-    borderRadius: "4px"
+    borderRadius: "4px",
+    margin: "0px"
   },
   tabIcon: {
     width: "30px",
     height: "30px",
     display: "block",
     margin: "15px 0"
+  },
+  tabContent: {
+    color: 'black',
   },
   horizontalPills: {
     width: "100%",
@@ -105,7 +123,7 @@ const navPillsStyle = theme => ({
     color: "inherit"
   },
   contentWrapper: {
-    marginTop: "20px"
+    marginTop: "20px", 
   },
   primary: {
     "&,&:hover": {

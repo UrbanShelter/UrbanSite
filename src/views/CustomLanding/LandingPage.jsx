@@ -31,6 +31,7 @@ import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.js
 import typographyStyle from "assets/jss/material-kit-react/views/componentsSections/typographyStyle.jsx";
 import CustomTypeForm from "components/CustomTypeForm/CustomTypeForm.jsx";
 import SwitchingButton from "components/SwitchingButton/SwitchingButton.jsx";
+import NavPills from "components/NavPills/NavPills.jsx";
 
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.jsx";
@@ -86,24 +87,84 @@ class CustomLandingPage extends React.Component {
             </div>
           </div>
         </Parallax>
-        <div 
-        style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '36vw',
-        minWidth: '360px',
-        maxWidth: '795px',
-        height: '4vh',
-        minHeight: '56px',
-        padding: '12px',
-        margin: "-2.5vh auto",
-        zIndex: '5'
-      }}>
-        <SwitchingButton first={'For Tenants'} second={'For Landlords'}/>
-        </div>
-        <div className={classNames(classes.main, classes.mainRaised)} style={{marginTop: '-2.5vh'}}>
+        <div className={classNames(classes.main, classes.mainRaised)} style={{marginTop: '0vh'}}>
           <div className={classes.container}>
+          <div 
+          style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '36vw',
+          minWidth: '360px',
+          maxWidth: '795px',
+          minHeight: '56px',
+          padding: '12px',
+          margin: "-2.5vh auto",
+          zIndex: '5',
+        }}>
+          <NavPills
+                    color="primary"
+                    duoTabs
+                    tabs={[
+                      {
+                        tabButton: "For Tenants",
+                        tabContent: (
+                          <span>
+                            <p>
+                              Collaboratively administrate empowered markets via
+                              plug-and-play networks. Dynamically procrastinate
+                              B2C users after installed base benefits.
+                            </p>
+                            <br />
+                            <p>
+                              Dramatically visualize customer directed convergence
+                              without revolutionary ROI. Collaboratively
+                              administrate empowered markets via plug-and-play
+                              networks. Dynamically procrastinate B2C users after
+                              installed base benefits.
+                            </p>
+                            <br />
+                            <p>
+                              Dramatically visualize customer directed convergence
+                              without revolutionary ROI. Collaboratively
+                              administrate empowered markets via plug-and-play
+                              networks. Dynamically procrastinate B2C users after
+                              installed base benefits.
+                            </p>
+                          </span>
+                        )
+                      },
+                      {
+                        tabButton: "For Landlords",
+                        tabContent: (
+                          <span>
+                            <p>
+                              Collaboratively administrate empowered markets via
+                              plug-and-play networks. Dynamically procrastinate
+                              B2C users after installed base benefits.
+                            </p>
+                            <br />
+                            <p>
+                              Dramatically visualize customer directed convergence
+                              without revolutionary ROI. Collaboratively
+                              administrate empowered markets via plug-and-play
+                              networks. Dynamically procrastinate B2C users after
+                              installed base benefits.
+                            </p>
+                            <br />
+                            <p>
+                              Dramatically visualize customer directed convergence
+                              without revolutionary ROI. Collaboratively
+                              administrate empowered markets via plug-and-play
+                              networks. Dynamically procrastinate B2C users after
+                              installed base benefits.
+                            </p>
+                          </span>
+                        )
+                      }
+                    ]}
+                  />
+          </div>
             <ProductSection />
             <TeamSection />
             <WorkSection />

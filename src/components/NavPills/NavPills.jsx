@@ -36,14 +36,15 @@ class NavPills extends React.Component {
       direction,
       color,
       horizontal,
-      alignCenter
+      alignCenter,
+      duoTabs
     } = this.props;
     const flexContainerClasses = classNames({
       [classes.flexContainer]: true,
       [classes.horizontalDisplay]: horizontal !== undefined
     });
     const tabButtons = (
-      <div>
+      <div style={{display: 'flex', justifyContent: 'center'}}>
       <Tabs
         classes={{
           root: classes.root,
@@ -61,8 +62,9 @@ class NavPills extends React.Component {
             icon["icon"] = <prop.tabIcon className={classes.tabIcon} />;
           }
           const pillsClasses = classNames({
-            [classes.pills]: key===0,
-            [classes.pillsTwo]: key===1,
+            [classes.pills]: !duoTabs,
+            [classes.pillsOne]: duoTabs&&key===0,
+            [classes.pillsTwo]: duoTabs&&key===1,
             [classes.horizontalPills]: horizontal !== undefined,
             [classes.pillsWithIcons]: prop.tabIcon !== undefined
           });
@@ -84,6 +86,7 @@ class NavPills extends React.Component {
       </div>
     );
     const tabContent = (
+      <div style={{width: '100vw', maxWidth: '1920px', padding: '0 24px', height: '100%'}}>
       <div className={classes.contentWrapper}>
         <SwipeableViews
           axis={direction === "rtl" ? "x-reverse" : "x"}
@@ -98,6 +101,7 @@ class NavPills extends React.Component {
             );
           })}
         </SwipeableViews>
+      </div>
       </div>
     );
     return horizontal !== undefined ? (

@@ -33,6 +33,7 @@ class SectionPills extends React.Component {
               <GridItem xs={12} sm={12} md={8} lg={6}>
                 <NavPills
                   color="primary"
+                  duoTabs
                   tabs={[
                     {
                       tabButton: "For Tenants",
